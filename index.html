@@ -1,29 +1,46 @@
+<!--This is my first website project which just shows Hello World but with some animation and some cool effects-->
+<!DOCTYPE html>
 <html>
     <head>
         <title>Hello World</title>
     </head>
     <style>
-    	body {
-            font-family: 'Handlee', cursive;
-            font-size: 13pt;
-            background-color: #2319FF;
-            padding: 10px;
-            margin: 0;
-    	}
-    	h1 {
-    		background-color: #A46735;
-    		width:200px;
-    		height:100px;
-    	}
-    	p#new {
-    		color: #FF0000;
-    		font-size: 20pt;
-    	}
+    body {
+    display:flex;
+    justify-content:center;
+    algin-itmes:center;
+    background-color:#286A6D;
+    }
+    div {
+    width:80vw;
+    height:50vh;
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    algin-itmes:center;
+    margin-top:5vh;
+    background-color:#EBCBD2;
+    }
+    #hello {
+    margin:auto;
+    font-size:10vw;
+    font-weight:600;
+    text-shadow:2px 2px 5px red;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    }
+    @keyframes rotation {
+    25%{transform:rotateZ(90deg);}
+    50%{transform:rotateZ(180deg);}
+    75%{transform:rotateZ(270deg);}
+    100%{transform:rotateZ(360deg);}
+    }
     </style>
     <body>
-        <h1>VB vibner</h1>
         <div>
-            <p id="new">Hello World!</p>
+            <span id="hello">Hello World!</span>
         </div>
     </body>
 </html>
